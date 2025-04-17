@@ -39,7 +39,6 @@ export default function Register() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isAdmin, setIsAdmin] = useState(false); // opcional
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
@@ -88,14 +87,6 @@ export default function Register() {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <label>
-          <input
-            type="checkbox"
-            checked={isAdmin}
-            onChange={(e) => setIsAdmin(e.target.checked)}
-          />{" "}
-          Registrar como admin
-        </label>
         <Button type="submit">Registrar</Button>
       </form>
     </Container>
